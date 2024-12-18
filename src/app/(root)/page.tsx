@@ -1,4 +1,7 @@
 export default function Home() {
-	return <div>home</div>;
+	return (
+		<>
+			<h1 className="heading">Home</h1>
+		</>
+	);
 }
-
