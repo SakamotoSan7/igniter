@@ -6,6 +6,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Button } from './ui/button';
 import { Author, Startup } from '@/sanity/types';
+import { numberFormatting } from '@/lib/formatViews';
 
 export type StartupCardType = Omit<Startup, 'author'> & {
 	author?: Author;
@@ -22,7 +23,7 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
 				<div className='flex gap-1.5'>
 					<EyeIcon className='size-6 text-primary' />
 
-					<span className='text-16-medium'>{views}</span>
+					<span className='text-16-medium'>{numberFormatting(views)}</span>
 				</div>
 			</div>
 
