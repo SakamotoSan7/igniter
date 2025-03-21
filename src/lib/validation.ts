@@ -7,12 +7,12 @@ export const formSchema = z.object({
 		.max(100, { message: 'Title must be less than 100 characters' }),
 	description: z
 		.string()
-		.min(20, { message: 'Description is required at least 20 characters' })
+		.min(10, { message: 'Description is required at least 10 characters' })
 		.max(500, { message: 'Title must be less than 500 characters' }),
 	category: z
 		.string()
 		.min(3, { message: 'Category is required at least 3 characters' })
-		.max(20, { message: 'Title must be less than 20 characters' }),
+		.max(60, { message: 'Title must be less than 60 characters' }),
 	link: z
 		.string()
 		.url()

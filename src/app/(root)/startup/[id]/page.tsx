@@ -33,14 +33,16 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 			</section>
 
 			<section className='section_container'>
-				<Image
-					src={post.image}
-					alt='thumbnail'
-					layout='responsive'
-					width={1280}
-					height={720}
-					className='rounded-xl'
-				/>
+				<div className='flex justify-center'>
+					<Image
+						src={post.image}
+						alt='thumbnail'
+						layout='intrinsic'
+						width={720}
+						height={720}
+						className='rounded-xl'
+					/>
+				</div>
 
 				<div className='space-y-5 mt-10 max-w-4xl mx-auto'>
 					<div className='flex-between gap-5'>
@@ -57,8 +59,12 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 							/>
 
 							<div>
-								<p className='text-20-medium'>{post.author?.name}</p>
-								<p className='text-16-medium !text-black-300'>@{post.author?.username}</p>
+								<p className='text-20-medium'>
+									{post.author?.name}
+								</p>
+								<p className='text-16-medium !text-black-300'>
+									@{post.author?.username}
+								</p>
 							</div>
 						</Link>
 
