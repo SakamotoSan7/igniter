@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { formatDate } from '@/lib/utils';
+import { cn, formatDate } from '@/lib/utils';
 import { EyeIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,13 +7,23 @@ import React from 'react';
 import { Button } from './ui/button';
 import { Author, Startup } from '@/sanity/types';
 import { numberFormatting } from '@/lib/formatViews';
+import { Skeleton } from './ui/skeleton';
 
 export type StartupCardType = Omit<Startup, 'author'> & {
 	author?: Author;
 };
 
 const StartupCard = ({ post }: { post: StartupCardType }) => {
-	const { _createdAt, views, author, _id, description, image, category, title } = post;
+	const {
+		_createdAt,
+		views,
+		author,
+		_id,
+		description,
+		image,
+		category,
+		title,
+	} = post;
 
 	return (
 		<li className='startup-card group'>
@@ -23,26 +33,32 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
 				<div className='flex gap-1.5'>
 					<EyeIcon className='size-6 text-primary' />
 
-					<span className='text-16-medium'>{numberFormatting(views)}</span>
+					<span className='text-16-medium'>
+						{numberFormatting(views)}
+					</span>
 				</div>
 			</div>
 
 			<div className='flex-between mt-5 gap-5'>
 				<div className='flex-1'>
 					<Link href={`/user/${author?._id}`}>
-						<p className='text-16-medium line-clamp-1'>{author?.name}</p>
+						<p className='text-16-medium line-clamp-1'>
+							{author?.name}
+						</p>
 					</Link>
 
 					<Link href={`/startup/${_id}`}>
-						<h3 className='text-26-semibold line-clamp-1'>{title}</h3>
+						<h3 className='text-26-semibold line-clamp-1'>
+							{title}
+						</h3>
 					</Link>
 				</div>
 
 				<div>
 					<Link href={`/user/${author?._id}`}>
 						<Image
-							src={'https://placehold.co/48x48'}
-							alt='placeholder'
+							src={author?.image || 'https://placehold.co/48x48'}
+							alt={author?.name || 'placeholder'}
 							width={48}
 							height={48}
 							className='rounded-full'
@@ -76,5 +92,15 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
 		</li>
 	);
 };
+
+export const StartupCardSkeleton = () => (
+	<>
+		{[0, 1, 2, 3].map((i: number) => (
+			<li key={cn('skeleton', i)}>
+				<Skeleton className='startup-card_skeleton' />
+			</li>
+		))}
+	</>
+);
 
 export default StartupCard;
