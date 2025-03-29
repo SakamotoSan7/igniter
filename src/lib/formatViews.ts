@@ -8,8 +8,10 @@ export default function formatViews(totalViews: number) {
 	}
 }
 
-export function numberFormatting(totalViews: number) {
-	const views = totalViews.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+export function numberFormatting(totalViews: number | null | undefined) {
+	if (totalViews === null || totalViews === undefined) return '0';
+
+	const views = totalViews?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 	return views;
 }
