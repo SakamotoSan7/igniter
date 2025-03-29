@@ -68,16 +68,18 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 							/>
 
 							<div>
-								<p className='text-20-medium'>
+								<p className='text-16-medium sm:text-20-medium '>
 									{post.author?.name}
 								</p>
-								<p className='text-16-medium !text-black-300'>
+								<p className='font-medium text-[10px] sm:text-16-medium !text-black-300 '>
 									@{post.author?.username}
 								</p>
 							</div>
 						</Link>
 
-						<p className='category-tag'>{post.category}</p>
+						<p className='category-tag max-sm:max-w-40 break-words max-sm:absolute max-sm:right-4 text-center '>
+							{post.category}
+						</p>
 					</div>
 
 					<h3 className='text-30-bold'>Pitch Details</h3>
