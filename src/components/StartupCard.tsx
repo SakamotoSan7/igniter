@@ -34,7 +34,7 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
 					<EyeIcon className='size-6 text-primary' />
 
 					<span className='text-16-medium'>
-						{numberFormatting(views)}
+						{numberFormatting(views as number)}
 					</span>
 				</div>
 			</div>
