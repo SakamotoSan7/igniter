@@ -1,69 +1,51 @@
 # YC Directory
 
-Welcome to **YC Directory**, a project crafted with passion and precision by **Kristianto**. This repository showcases my skills as a web developer, blending creativity, functionality, and modern web technologies to deliver an engaging and user-friendly experience.
-
-## 🌟 Project Overview
-
-YC Directory is a dynamic web application designed to provide a seamless way to explore and manage directories. Whether you're organizing resources, navigating through data, or building a scalable directory system, this project demonstrates my ability to create robust and intuitive solutions.
+YC Directory is a Next.js 15 platform designed for entrepreneurs to submit their startup ideas, participate in virtual pitch competitions, and explore other innovative pitches. With a clean, minimalistic design, YC Directory ensures a seamless user experience while fostering creativity and collaboration.
 
 ## 🚀 Features
 
-- **Interactive User Interface**: A clean, responsive, and modern design that adapts to all devices.
-- **Dynamic Data Handling**: Efficiently fetch, display, and manage directory data in real-time.
-- **Search and Filter**: Advanced search and filtering capabilities for quick and easy navigation.
-- **Scalable Architecture**: Built with scalability in mind, ensuring performance even with large datasets.
-- **Custom Animations**: Smooth transitions and animations for an enhanced user experience.
+- **Live Content API**: Displays the latest startup ideas dynamically on the homepage using Sanity's Content API.
+- **GitHub Authentication**: Log in effortlessly using your GitHub account.
+- **Pitch Submission**: Submit startup ideas with a title, description, category, and multimedia links (image or video).
+- **View Pitches**: Browse through submitted ideas with filtering options by category.
+- **Pitch Details Page**: View detailed information about any pitch, including multimedia and descriptions.
+- **Profile Page**: Access a personalized list of pitches you've submitted.
+- **Editor Picks**: Admins can highlight top startup ideas via the "Editor Picks" feature managed in Sanity Studio.
+- **Views Counter**: Tracks the number of views for each pitch instead of using an upvote system.
+- **Search**: Quickly search and load pitches with ease.
+- **Minimalistic Design**: A fresh and simple UI with essential pages for a clean and intuitive experience.
 
-## 🛠️ Technologies Used
+## 🛠 Technologies Used
 
-This project leverages the following technologies and tools:
+- **Next.js 15**: Framework for building server-rendered React applications.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Sanity**: Headless CMS for managing content.
+- **Sentry**: Application monitoring for error tracking.
+- **NextAuth.js**: Secure authentication for user login.
+- **Git & GitHub**: Version control and collaboration.
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Frameworks**: React.js (or Vanilla JS if applicable)
-- **Styling**: Tailwind CSS / SCSS for modular and maintainable styles
-- **Backend**: Node.js with Express.js (if applicable)
-- **Database**: MongoDB / Firebase (if applicable)
-- **Version Control**: Git and GitHub for collaboration and version tracking
+## 📖 Getting Started
 
-## 📂 Project Structure
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/SakamotoSan7/yc_directory.git
+    ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Run the development server:
+    ```bash
+    npm run dev
+    ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-```
-yc_directory/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── utils/
-│   └── styles/
-├── README.md
-└── package.json
-```
+## 📬 Contact
 
-## 🎯 Goals of the Project
-
-1. **Showcase Web Development Skills**: Highlight my ability to build functional, scalable, and visually appealing web applications.
-2. **Problem-Solving**: Demonstrate my approach to solving real-world problems through code.
-3. **User-Centric Design**: Focus on creating an intuitive and enjoyable user experience.
-
-## 🧑‍💻 About Me
-
-Hi, I'm **Kristianto**, a passionate web developer with a keen eye for detail and a love for crafting exceptional digital experiences. I thrive on solving complex problems and turning ideas into reality through code. This project is a testament to my dedication, creativity, and technical expertise.
-
-## 📈 Future Enhancements
-
-- Add user authentication and role-based access control.
-- Implement advanced analytics and reporting features.
-- Integrate APIs for extended functionality.
-- Optimize performance for large-scale deployments.
-
-## 🤝 Let's Connect!
-
-If you're impressed by this project and want to collaborate or discuss potential opportunities, feel free to reach out:
-
-- **Email**: inikristiantoitu@gmail.com
-- **LinkedIn**: Kristianto (www.linkedin.com/in/kristianto-9117)
-- **GitHub**: SakamotoSan7 (https://github.com/SakamotoSan7)
+📧 **Email**: [inikristiantoitu@gmail.com](mailto:inikristiantoitu@gmail.com)  
+💼 **LinkedIn**: [Kristianto](https://www.linkedin.com/in/kristianto)  
+🖥 **GitHub**: [SakamotoSan7](https://github.com/SakamotoSan7)
 
 ---
 
-Thank you for exploring YC Directory! I hope this project inspires confidence in my abilities as a web developer. Your feedback and suggestions are always welcome!
+Feel free to contribute to the project or reach out if you have any questions!
