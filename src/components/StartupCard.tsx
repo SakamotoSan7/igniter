@@ -1,3 +1,5 @@
+'use client';
+import { useState, useEffect } from 'react';
 /* eslint-disable @next/next/no-img-element */
 import { cn, formatDate } from '@/lib/utils';
 import { EyeIcon } from 'lucide-react';
@@ -24,6 +26,30 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
 		category,
 		title,
 	} = post;
+
+	const [imageUrl, setImageUrl] = useState(image || '');
+
+	useEffect(() => {
+		// Check image availability
+		if (imageUrl) {
+		  fetch(imageUrl, { method: 'GET', mode: 'no-cors' })  // Menambahkan mode 'no-cors'
+			.then((res) => {
+			  if (res.ok || res.type === 'opaque') {  // Cek respons atau response type opaque
+				setImageUrl(imageUrl);
+			  } else {
+				// If image doesn't exist, use default image
+				setImageUrl(
+				  'https://cf-assets.www.cloudflare.com/slt3lc6tev37/2poCmGSnGtmCDVyWdLvnex/744642fb854e71ae46f70f84910f6492/Cloudflare-for-startups-hero.png'
+				);
+			  }
+			})
+			.catch((err) => {
+			  console.error('fetch error:', err);
+			  setImageUrl('https://cf-assets.www.cloudflare.com/slt3lc6tev37/2poCmGSnGtmCDVyWdLvnex/744642fb854e71ae46f70f84910f6492/Cloudflare-for-startups-hero.png');
+			});
+		}
+	  }, [imageUrl]);
+	  
 
 	return (
 		<li className='startup-card group'>
@@ -71,7 +97,7 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
 				<p className='startup-card_desc'>{description}</p>
 
 				<img
-					src={image}
+					src={imageUrl}
 					alt='placeholder'
 					className='startup-card_img'
 				/>
