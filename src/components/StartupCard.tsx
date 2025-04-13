@@ -32,24 +32,37 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
 	useEffect(() => {
 		// Check image availability
 		if (imageUrl) {
-		  fetch(imageUrl, { method: 'GET', mode: 'no-cors' })  // Menambahkan mode 'no-cors'
-			.then((res) => {
-			  if (res.ok || res.type === 'opaque') {  // Cek respons atau response type opaque
-				setImageUrl(imageUrl);
-			  } else {
-				// If image doesn't exist, use default image
-				setImageUrl(
-				  'https://cf-assets.www.cloudflare.com/slt3lc6tev37/2poCmGSnGtmCDVyWdLvnex/744642fb854e71ae46f70f84910f6492/Cloudflare-for-startups-hero.png'
-				);
-			  }
-			})
-			.catch((err) => {
-			  console.error('fetch error:', err);
-			  setImageUrl('https://cf-assets.www.cloudflare.com/slt3lc6tev37/2poCmGSnGtmCDVyWdLvnex/744642fb854e71ae46f70f84910f6492/Cloudflare-for-startups-hero.png');
-			});
+			fetch(imageUrl)
+				.then((res) => {
+					if (res.ok) {
+						setImageUrl(imageUrl);
+					} else {
+						setImageUrl(
+							'https://cf-assets.www.cloudflare.com/slt3lc6tev37/2poCmGSnGtmCDVyWdLvnex/744642fb854e71ae46f70f84910f6492/Cloudflare-for-startups-hero.png'
+						);
+					}
+				})
+				.catch(() => {
+					fetch(imageUrl, { method: 'GET', mode: 'no-cors' }) // Menambahkan mode 'no-cors'
+						.then((res) => {
+							if (res.ok || res.type === 'opaque') {
+								// Cek respons atau response type opaque
+								setImageUrl(imageUrl);
+							} else {
+								// If image doesn't exist, use default image
+								setImageUrl(
+									'https://cf-assets.www.cloudflare.com/slt3lc6tev37/2poCmGSnGtmCDVyWdLvnex/744642fb854e71ae46f70f84910f6492/Cloudflare-for-startups-hero.png'
+								);
+							}
+						})
+						.catch(() => {
+							setImageUrl(
+								'https://cf-assets.www.cloudflare.com/slt3lc6tev37/2poCmGSnGtmCDVyWdLvnex/744642fb854e71ae46f70f84910f6492/Cloudflare-for-startups-hero.png'
+							);
+						});
+				});
 		}
-	  }, [imageUrl]);
-	  
+	}, [imageUrl]);
 
 	return (
 		<li className='startup-card group'>
