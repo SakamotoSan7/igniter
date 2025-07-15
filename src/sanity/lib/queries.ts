@@ -21,7 +21,7 @@ export const STARTUPS_QUERY = defineQuery(`
 `);
 
 export const STARTUP_BY_ID_QUERY = defineQuery(`
-    *[_type == "startup" && _id == $id][0] {
+    *[_type in ["startup", "nonStartup"] && _id == $id][0] {
         _id,
         title,
         slug,
@@ -42,7 +42,7 @@ export const STARTUP_BY_ID_QUERY = defineQuery(`
 `);
 
 export const STARTUP_VIEWS_QUERY = defineQuery(`
-    *[_type == "startup" && _id == $id][0] {
+     *[_type in ["startup", "nonStartup"] && _id == $id][0] {
         views, _id
     }
 `);
@@ -74,7 +74,7 @@ export const AUTHOR_BY_ID_QUERY = defineQuery(`
 `);
 
 export const STARTUPS_BY_AUTHOR_QUERY = defineQuery(`
-    *[_type == "startup" && author._ref == $id] | order(_createdAt desc) {
+     *[_type in ["startup", "nonStartup"] && author._ref == $id] | order(_createdAt desc) {
         _id,
         title,
         slug,
