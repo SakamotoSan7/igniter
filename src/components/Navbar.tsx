@@ -45,7 +45,7 @@ const Navbar = async () => {
 							</form>
 
 							<Link
-								className='flex items-center sm:font-semibold sm:gap-2 sm:border sm:border-[#EE2B69] sm:rounded-full sm:px-2 sm:py-0.5 sm:pr-0.5 sm:text-[#EE2B69] sm:hover:bg-[#EE2B69] sm:hover:text-white sm:transition'
+								className='flex items-center sm:font-semibold sm:gap-2 sm:border sm:border-[#3B82F6] sm:rounded-full sm:px-2 sm:py-0.5 sm:pr-0.5 sm:text-[#3B82F6] sm:hover:bg-[#3B82F6] sm:hover:text-white sm:transition'
 								href={`/user/${session?.id}`}
 							>
 								<span className='max-sm:hidden'>
