@@ -1,6 +1,6 @@
-# YC Directory
+# Igniter
 
-YC Directory is a Next.js 15 platform designed for entrepreneurs to submit their startup ideas, participate in virtual pitch competitions, and explore other innovative pitches. With a clean, minimalistic design, YC Directory ensures a seamless user experience while fostering creativity and collaboration.
+Igniter is a Next.js 15 platform designed for entrepreneurs to submit their startup ideas, participate in virtual pitch competitions, and explore other innovative pitches. With a clean, minimalistic design, Igniter ensures a seamless user experience while fostering creativity and collaboration.
 
 ## 🚀 Features
 
@@ -28,7 +28,7 @@ YC Directory is a Next.js 15 platform designed for entrepreneurs to submit their
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/SakamotoSan7/yc_directory.git
+    git clone https://github.com/SakamotoSan7/igniter.git
     ```
 2. Install dependencies:
     ```bash
