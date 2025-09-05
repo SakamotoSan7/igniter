@@ -41,18 +41,18 @@ Igniter is a Next.js 15 platform designed for entrepreneurs to submit their star
     ```
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 👨‍💻 About Me
+## 👨‍💻 About the Creator
 
-Hi, I’m **Kristianto**! I’m a web developer with a passion for building engaging and user-friendly web applications. I love solving problems with code and continuously learning new technologies to improve my craft. If you’re looking for a developer who’s dedicated, creative, and detail-oriented, I’d love to connect!
+Hi, I’m **Sakamoto-san**! I’m a developer passionate about building platforms that empower entrepreneurs and creators. With a focus on modern web technologies like Next.js, Sanity, and Tailwind CSS, I strive to deliver clean, intuitive, and collaborative user experiences. If you have ideas, feedback, or want to collaborate on Igniter, feel free to connect!
 
 ---
 
-## 📫 Contact Me
+## 📫 Contact
 
 - **Email**: inikristiantoitu@gmail.com
-- **LinkedIn**: Kristianto (www.linkedin.com/in/kristianto-9117)
-- **GitHub**: SakamotoSan7 (https://github.com/SakamotoSan7)
+- **LinkedIn**: [Kristianto](https://www.linkedin.com/in/kristianto-9117)
+- **GitHub**: [SakamotoSan7](https://github.com/SakamotoSan7)
 
 ---
 
-Thank you for taking the time to explore my project! I hope it gives you a glimpse of my skills and passion for web development. Let’s build something amazing together! 🌟
+Thanks for exploring Igniter! Your feedback and contributions are always appreciated. Let’s spark innovation together! 🚀
