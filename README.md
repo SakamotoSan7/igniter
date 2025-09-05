@@ -43,7 +43,7 @@ Igniter is a Next.js 15 platform designed for entrepreneurs to submit their star
 
 ## 👨‍💻 About the Creator
 
-Hi, I’m **Sakamoto-san**! I’m a developer passionate about building platforms that empower entrepreneurs and creators. With a focus on modern web technologies like Next.js, Sanity, and Tailwind CSS, I strive to deliver clean, intuitive, and collaborative user experiences. If you have ideas, feedback, or want to collaborate on Igniter, feel free to connect!
+Hi, I’m **Kristianto**! I’m a developer passionate about building platforms that empower entrepreneurs and creators. With a focus on modern web technologies like Next.js, Sanity, and Tailwind CSS, I strive to deliver clean, intuitive, and collaborative user experiences. If you have ideas, feedback, or want to collaborate on Igniter, feel free to connect!
 
 ---
 
