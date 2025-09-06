@@ -1,5 +1,5 @@
-<h1><a href="https://igniter-theta.vercel.app" target="_blank">💡 IGNITER</a></h1>
-[🔗 https:https://igniter-theta.vercel.app]
+<h1><a href="https://igniter-theta.vercel.app" target="_blank">💡 IGNITER – Startup Pitch Platform</a></h1>
+[🔗 https: https://igniter-theta.vercel.app ]
 
 Igniter is a Next.js 15 platform designed for entrepreneurs to submit their startup ideas, participate in virtual pitch competitions, and explore other innovative pitches. With a clean, minimalistic design, Igniter ensures a seamless user experience while fostering creativity and collaboration.
 
